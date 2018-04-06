@@ -16,8 +16,8 @@ var twitter = new Twitter(keys.twitter)
 function getTwitter(){
     twitter.get('statuses/user_timeline', {screen_name: 'Tom Jones 2324', count: 3}).then(function(tweets){
         tweets.forEach(function(tweet){
-            console.log("Time of Tweet: " + tweet.created_at);
-            console.log("Message: " + tweet.text + "\n");
+            console.log("Time " + tweet.created_at);
+            console.log("Text: " + tweet.text + "\n");
         })
     })
 }
